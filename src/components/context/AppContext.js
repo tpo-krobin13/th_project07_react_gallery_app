@@ -13,6 +13,9 @@ export class Provider extends Component {
   }
 
   searchPhotos = (term) =>  {
+    if(!appUtils.getFlickrApiKey()){
+      throw new Error('Unable to locate Flickr apiKey in src root folder')
+    }
     this.setState({
       isLoading: true
     })

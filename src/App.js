@@ -20,7 +20,7 @@ export default class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/search/:searchTerm" render={(value) => <ImageManager urlHistory={value.history} matchElem={value.match} loadImages={actions.searchPhotos} />} />
-            <Route component={PageNotFound} key={config.giphyApiKey} />
+            <Route component={PageNotFound} />
           </Switch>
         </BrowserRouter>
           )
